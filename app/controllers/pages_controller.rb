@@ -7,7 +7,7 @@ class PagesController < ApplicationController
   end
 
   def work
-    # Your work action code here
+
   end
 
   def about
