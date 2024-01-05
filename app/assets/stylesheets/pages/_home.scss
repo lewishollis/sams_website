@@ -1,1 +1,18 @@
-// Specific CSS for your home-page
+/* app/assets/stylesheets/gallery.css */
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -15px; /* Adjust margin as needed */
+}
+
+.gallery-item {
+  flex: 1 0 48%; /* Adjust the width of each item as needed (48% to leave some space between) */
+  margin: 1%; /* Add a small margin to create space between items */
+}
+
+.gallery-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px; /* Optional: Add border-radius for rounded corners */
+}

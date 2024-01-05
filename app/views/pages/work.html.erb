@@ -1,1 +1,7 @@
-<p>h1</p>
+<div class="gallery">
+  <% Dir.glob(Rails.root.join('app/assets/images/uploads/*.png')).each do |image_path| %>
+    <div class="gallery-item">
+      <%= image_tag image_path.sub("#{Rails.root.join('app/assets/images/')}", ''), class: 'gallery-image', alt: 'Image' %>
+    </div>
+  <% end %>
+</div>
