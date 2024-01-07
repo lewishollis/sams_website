@@ -1,0 +1,34 @@
+.footer {
+  display: flex;
+  background-color: white;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 5px;
+  margin-top: auto;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  position: relative;
+  bottom: 0;
+}
+
+.footer-item {
+  flex-basis: calc(33.33% - 20px);
+  margin-right: 10px;
+  text-align: center;
+  padding-top: 10px;
+  a {
+    color: black;
+  }
+  p {
+    font-size: 10px;
+  }
+}
+
+.footer-item:last-child {
+  margin-right: 0;
+}
+
+
+.footer-item i {
+  margin-right: 5px;
+}
