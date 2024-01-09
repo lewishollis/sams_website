@@ -7,17 +7,19 @@
 
 .gallery-item {
   display: flex;
+  flex-direction: column; /* Adjust flex direction to column */
+  align-items: center;
 }
 
-.gallery__img:hover {
+.gallery__media:hover {
   transform: scale(1.05); /* Zoom in by 5% on hover */
   transition: transform 0.5s ease; /* Added transition for smooth animation */
 }
 
-.gallery__img {
+.gallery__media {
   width: 100%;
   height: 100%;
-  object-fit: fill;
+  object-fit: cover; /* Adjust object-fit property to control how the media is displayed */
 }
 
 .gallery__item--1 {
@@ -38,4 +40,9 @@
 .gallery__item--4 {
   grid-column: 5 / span 4;
   grid-row: 3 / span 2;
+}
+
+.gallery__item--100 {
+  grid-column: 1 / span 4;
+  grid-row: 6 / span 2;
 }
