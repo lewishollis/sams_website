@@ -1,0 +1,9 @@
+<div class="gallery">
+  <% Dir.glob(Rails.root.join('app/assets/images/uploads/*.png')).each_with_index do |image_path, index| %>
+    <div class="item gallery__item gallery__item--<%= index + 1 %>">
+      <%= image_tag image_path.sub("#{Rails.root.join('app/assets/images/')}", ''), class: 'gallery-image gallery__img', alt: "Image #{index + 1}" %>
+      <div class="caption">
+      </div>
+    </div>
+  <% end %>
+</div>
