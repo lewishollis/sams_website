@@ -1,4 +1,3 @@
-/* app/assets/stylesheets/gallery.css */
 .gallery {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
@@ -7,20 +6,18 @@
 }
 
 .gallery-item {
-  object-fit: fill;
   display: flex;
 }
 
-
-.gallery-item:hover .gallery__img {
+.gallery__img:hover {
   transform: scale(1.05); /* Zoom in by 5% on hover */
+  transition: transform 0.5s ease; /* Added transition for smooth animation */
 }
 
 .gallery__img {
   width: 100%;
   height: 100%;
   object-fit: fill;
-  transition: transform 0.5s ease; /* Added transition for smooth animation */
 }
 
 .gallery__item--1 {
