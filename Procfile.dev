@@ -1,2 +1,2 @@
-web: env RAILS_ENV=production RUBY_DEBUG_OPEN=true bin/rails server
+web: env RAILS_ENV=development RUBY_DEBUG_OPEN=true bin/rails server
 js: yarn build --watch
