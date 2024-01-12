@@ -11,13 +11,13 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
-        <li class="nav-item <%= 'active' if @active_page == 'work' %>">
+        <li class="nav-item <%= active_class(work_path) %>">
           <%= link_to "Work", work_path, class: "nav-link" %>
         </li>
-        <li class="nav-item <%= 'active' if @active_page == 'showreel' %>">
+        <li class="nav-item <%= active_class(showreel_path) %>">
           <%= link_to "Showreel", showreel_path, class: "nav-link" %>
         </li>
-        <li class="nav-item <%= 'active' if @active_page == 'about' %>">
+        <li class="nav-item <%= active_class(about_path) %>">
           <%= link_to "About", about_path, class: "nav-link" %>
         </li>
       </ul>

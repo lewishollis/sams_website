@@ -11,6 +11,17 @@
   width: 90px
 }
 
+.navbar-nav .nav-item.active {
+  background-color: #737678; /* Set the background color */
+}
+
+/* Style for the active tab link text */
+.navbar-nav .nav-item.active a.nav-link {
+  color: #ffffff; /* Set the text color */
+  font-weight: bold; /* Optionally, set the font weight */
+}
+
+
 .navbar-lewagon .navbar-nav .nav-item {
   margin-right: 50px;
 }
