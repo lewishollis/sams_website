@@ -7,20 +7,20 @@
 
 .gallery-item {
   display: flex;
-  flex-direction: column; /* Adjust flex direction to column */
+  flex-direction: column;
   align-items: center;
-}
-
-.gallery__media:hover {
-  overflow: hidden;
-  transform: scale(1.02); /* Zoom in by 5% on hover */
-  transition: transform 0.5s ease; /* Added transition for smooth animation */
 }
 
 .gallery__media {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Adjust object-fit property to control how the media is displayed */
+  object-fit: cover;
+  transition: transform 0.5s ease; /* Added transition for smooth animation */
+}
+
+.gallery__item:hover .gallery__media {
+  transform: scale(1.02);
+  overflow: hidden !important;
 }
 
 .gallery__item--1 {
