@@ -7,7 +7,18 @@
 
 .about-image {
   display: flex;
-  height: 500px;
+  flex-direction: column; /* Adjust to column direction */
+}
+
+.about-image img {
+  width: 420px;
+  height: auto; /* Ensure the image maintains its aspect ratio */
+}
+
+.about-image figcaption {
+  margin-top: 5px; /* Adjust the spacing between the image and caption */
+  text-align: end;
+  font-size: small;
 }
 
 .about-me {
