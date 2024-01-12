@@ -12,7 +12,8 @@
 }
 
 .gallery__media:hover {
-  transform: scale(1.05); /* Zoom in by 5% on hover */
+  overflow: hidden;
+  transform: scale(1.02); /* Zoom in by 5% on hover */
   transition: transform 0.5s ease; /* Added transition for smooth animation */
 }
 

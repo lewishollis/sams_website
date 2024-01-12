@@ -1,4 +1,5 @@
 class ShowreelController < ApplicationController
   def show
-  end
+      @active_page = 'showreel'
+    end
 end
