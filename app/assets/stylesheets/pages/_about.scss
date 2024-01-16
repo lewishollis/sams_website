@@ -1,34 +1,32 @@
 .about-container {
   display: flex;
-  flex-direction: column; /* Adjust to column direction on smaller screens */
+  flex-direction: column;
   align-items: center;
-  padding: 20px;
 }
 
 .about-image img {
-  width: 100%; /* Use 100% width for responsive images */
-  height: auto; /* Maintain aspect ratio */
+  width: 100%;
+  height: auto;
 }
 
 .about-image figcaption {
-  margin-top: 10px; /* Increase the spacing between the image and caption */
-  text-align: center; /* Center the caption */
+  margin-top: 10px;
+  text-align: center;
   font-size: small;
 }
 
 .about-me {
-  max-width: 100%; /* Utilize the full width on smaller screens */
-  margin: 20px 0; /* Adjust the margin for better spacing */
+  max-width: 100%;
+  margin: 20px 0;
 }
 
-/* Example of a media query for screens with a width of 768px and above */
 @media (min-width: 768px) {
   .about-container {
-    flex-direction: row; /* Switch back to row direction for larger screens */
+    flex-direction: row;
   }
 
   .about-me {
-    max-width: 50%; /* Maintain the 50% width for larger screens */
-    margin: 20px; /* Adjust margin as needed */
+    max-width: 50%;
+    margin: 20px;
   }
 }
