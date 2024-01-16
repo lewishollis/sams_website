@@ -15,7 +15,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.5s ease; /* Added transition for smooth animation */
+  transition: transform 0.5s ease;
 }
 
 .gallery__item:hover .gallery__media {
