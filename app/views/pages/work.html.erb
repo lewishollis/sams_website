@@ -1,16 +1,18 @@
 <div class="gallery">
-  <% Dir.glob(Rails.root.join('app/assets/images/uploads/*.{png,jpg,jpeg,gif}')).each_with_index do |image_path, index| %>
-    <div class="item gallery__item gallery__item--<%= index + 1 %>">
-      <%= image_tag image_path.sub("#{Rails.root.join('app/assets/images/')}", ''), class: 'gallery-media gallery__media', alt: "Image #{index + 1}" %>
-      <div class="caption">
-      </div>
-    </div>
-  <% end %>
+  <% image_files = Dir.glob(Rails.root.join('app/assets/images/uploads/*.{png,jpg,jpeg,gif}')) %>
+  <% video_files = Dir.glob(Rails.root.join('app/assets/images/uploads/*.mp4')) %>
 
-  <% Dir.glob(Rails.root.join('app/assets/images/uploads/*.mp4')).each_with_index do |video_path, index| %>
-    <div class="item gallery__item gallery__item--<%= index + 100 %>">
-      <%= video_tag video_path.sub("#{Rails.root.join('app/assets/images/')}", ''), class: 'gallery-media gallery__media', controls: true %>
+  <% all_media = (image_files + video_files).sort_by { |file| file.match(/\d+/)[0].to_i } %>
+
+  <% all_media.each_with_index do |media_path, index| %>
+    <div class="item gallery__item gallery__item--<%= index + 1 %>">
+      <% if media_path =~ /\.(png|jpe?g|gif)$/ %>
+        <%= image_tag media_path.sub("#{Rails.root.join('app/assets/images/')}", ''), class: 'gallery-media gallery__media', alt: "Image #{index + 1}" %>
+      <% elsif media_path =~ /\.mp4$/ %>
+        <%= video_tag media_path.sub("#{Rails.root.join('app/assets/images/')}", ''), class: 'gallery-media gallery__media', controls: true %>
+      <% end %>
       <div class="caption">
+        <!-- Add your caption content here if needed -->
       </div>
     </div>
   <% end %>

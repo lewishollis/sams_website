@@ -60,7 +60,45 @@
   grid-row: 5 / span 2;
 }
 
+.gallery__item--7 {
+  grid-column: 5 / span 4;
+  grid-row: 7 / span 2;
+}
+
+.gallery__item--8 {
+  grid-column: 1 / span 4;
+  grid-row: 7 / span 2;
+}
+
+.gallery__item--9 {
+  grid-column: 1 / span 4;
+  grid-row: 9 / span 2;
+}
+
+.gallery__item--10 {
+  grid-column: 5 / span 4;
+  grid-row: 9 / span 2;
+}
+
+.gallery__item--11 {
+  grid-column: 1 / span 4;
+  grid-row: 11 / span 2;
+}
+
+.gallery__item--12 {
+  grid-column: 5 / span 4;
+  grid-row: 11 / span 2;
+}
+
+.gallery__item--13 {
+  grid-column: 2 / span 6;
+  grid-row: 13 / span 2;
+}
+
+
+/* i put this here for videos ...
 .gallery__item--100 {
   grid-column: 1 / span 4;
   grid-row: 6 / span 2;
 }
+*/
