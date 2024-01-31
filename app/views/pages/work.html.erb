@@ -22,12 +22,8 @@
     <div class="item gallery__item gallery__item--<%= index + 1 %>">
       <%= image_tag data[:path], class: 'gallery-media gallery__media', alt: "Image #{index + 1}" %>
       <div class="overlay">
-        <div class="title">
           <p><%= data[:title] %></p>
-        </div>
-        <!-- <div class="icons">
-          <%= image_tag data[:icons], class: 'icon', alt: "Icon #{index + 1}" %>
-        </div> !-->
+          <%= image_tag data[:icons], class: 'icon' %>
       </div>
     </div>
   <% end %>
