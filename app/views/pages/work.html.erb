@@ -1,7 +1,7 @@
 <!-- In your view -->
 <div class="gallery">
   <% image_data = [
-    { path: 'uploads/1 Teamwork Skills.png', title: 'Teamwork Skills', icons: 'Animation-01.svg' },
+    { path: 'uploads/1 Teamwork Skills.png', title: 'Teamwork Skills', icons: ['Animation-01.svg', 'illustration-01.svg'] },
     { path: 'uploads/2 Black Lives Matter (1).png', title: 'Black Lives Matter', icons: 'Animation-01.svg' },
     { path: 'uploads/3 Banana Split (1).png', title: 'Banana Split', icons: 'Animation-01.svg' },
     { path: 'uploads/4 Coaching _ Mentoring.png', title: 'Coaching & Mentoring', icons: 'Animation-01.svg' },
@@ -17,13 +17,18 @@
     # Add more entries as needed
   ] %>
 
-<!-- In your view -->
-  <% image_data.each_with_index do |data, index| %>
+<% image_data.each_with_index do |data, index| %>
     <div class="item gallery__item gallery__item--<%= index + 1 %>">
       <%= image_tag data[:path], class: 'gallery-media gallery__media', alt: "Image #{index + 1}" %>
       <div class="overlay">
+        <div class="title">
           <p><%= data[:title] %></p>
-          <%= image_tag data[:icons], class: 'icon' %>
+        </div>
+         <div class="icons">
+          <% Array(data[:icons]).each do |icon| %>
+            <%= image_tag icon, class: 'icon', alt: "Icon #{index + 1}" %>
+          <% end %>
+        </div>
       </div>
     </div>
   <% end %>
