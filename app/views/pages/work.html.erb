@@ -2,29 +2,32 @@
 <div class="gallery">
   <% image_data = [
     { path: 'uploads/1 Teamwork Skills.png', title: 'Teamwork Skills', icons: 'Animation-01.svg' },
-    { path: 'uploads/2 Black Lives Matter (1).png', title: 'Black Lives Matter', icons: 'icon1.png' },
-    { path: 'uploads/3 Banana Split (1).png', title: 'Banana Split', icons: 'icon1.png' },
-    { path: 'uploads/4 Coaching _ Mentoring.png', title: 'Coaching & Mentoring', icons: 'icon1.png' },
-    { path: 'uploads/5 rdt (1).png', title: 'RDT', icons: 'icon1.png' },
-    { path: 'uploads/6 St Patricks (1).png', title: 'St Patricks Day', icons: 'icon1.png' },
-    { path: 'uploads/7 Autism Awareness.png', title: 'Autism Awareness', icons: 'icon1.png' },
-    { path: 'uploads/8 Valentines Day (1).png', title: 'Valentines Day', icons: 'icon1.png' },
-    { path: 'uploads/9 Managing Contractors.png', title: 'Managing Contractors', icons: 'icon1.png' },
-    { path: 'uploads/10 Manual Handing People.png', title: 'Manual Handing', icons: 'icon1.png' },
-    { path: 'uploads/11 Decision Making.png', title: 'Decision Making', icons: 'icon1.png' },
-    { path: 'uploads/12 Cyber Security.png', title: 'Cyber Security', icons: 'icon1.png' },
-    { path: 'uploads/13 DHL (1).png', title: 'DHL', icons: 'icon1.png' },
+    { path: 'uploads/2 Black Lives Matter (1).png', title: 'Black Lives Matter', icons: 'Animation-01.svg' },
+    { path: 'uploads/3 Banana Split (1).png', title: 'Banana Split', icons: 'Animation-01.svg' },
+    { path: 'uploads/4 Coaching _ Mentoring.png', title: 'Coaching & Mentoring', icons: 'Animation-01.svg' },
+    { path: 'uploads/5 rdt (1).png', title: 'RDT', icons: 'Animation-01.svg' },
+    { path: 'uploads/6 St Patricks (1).png', title: 'St Patricks Day', icons: 'Animation-01.svg' },
+    { path: 'uploads/7 Autism Awareness.png', title: 'Autism Awareness', icons: 'Animation-01.svg' },
+    { path: 'uploads/8 Valentines Day (1).png', title: 'Valentines Day', icons: 'Animation-01.svg' },
+    { path: 'uploads/9 Managing Contractors.png', title: 'Managing Contractors', icons: 'Animation-01.svg' },
+    { path: 'uploads/10 Manual Handing People.png', title: 'Manual Handing', icons: 'Animation-01.svg' },
+    { path: 'uploads/11 Decision Making.png', title: 'Decision Making', icons: 'Animation-01.svg' },
+    { path: 'uploads/12 Cyber Security.png', title: 'Cyber Security', icons: 'Animation-01.svg' },
+    { path: 'uploads/13 DHL (1).png', title: 'DHL', icons: 'Animation-01.svg' },
     # Add more entries as needed
   ] %>
 
+<!-- In your view -->
   <% image_data.each_with_index do |data, index| %>
     <div class="item gallery__item gallery__item--<%= index + 1 %>">
       <%= image_tag data[:path], class: 'gallery-media gallery__media', alt: "Image #{index + 1}" %>
-      <div class="caption">
-        <p class="title"><%= data[:title] %></p>
-        <div class="icons">
-          <!-- Render your icons here using data[:icons] -->
+      <div class="overlay">
+        <div class="title">
+          <p><%= data[:title] %></p>
         </div>
+        <!-- <div class="icons">
+          <%= image_tag data[:icons], class: 'icon', alt: "Icon #{index + 1}" %>
+        </div> !-->
       </div>
     </div>
   <% end %>
