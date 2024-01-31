@@ -33,6 +33,18 @@
     display: flex;
     flex-direction: column;
   }
+
+  .gallery__item {
+    grid-column: auto; /* Reset grid-column for mobile view */
+    grid-row: auto; /* Reset grid-row for mobile view */
+  }
+
+  .gallery__media {
+    object-fit: contain;
+    position: relative;
+    bottom: -49px;
+    height: 250px;
+  }
 }
 
 .gallery__item--1 {
