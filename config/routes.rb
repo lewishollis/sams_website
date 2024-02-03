@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   get 'work', to: 'pages#work'
   get 'about', to: 'pages#about'
   get 'showreel', to: 'pages#showreel'
+  get 'newtest', to: 'pages#newtest'
 end
