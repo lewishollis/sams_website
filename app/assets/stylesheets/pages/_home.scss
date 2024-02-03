@@ -39,8 +39,8 @@
   }
 
   .gallery__item {
-    grid-column: auto; /* Reset grid-column for mobile view */
-    grid-row: auto; /* Reset grid-row for mobile view */
+    grid-column: auto;
+    grid-row: auto;
   }
 
   .gallery__media {
@@ -48,6 +48,10 @@
     position: relative;
     bottom: -49px;
     height: auto;
+  }
+  .gallery__item:hover .overlay {
+    opacity: 1;
+    bottom: -15px;
   }
 
 }
