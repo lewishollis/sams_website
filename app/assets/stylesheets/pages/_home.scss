@@ -54,6 +54,7 @@
   .gallery__item:hover .overlay {
     opacity: 1;
     bottom: -15px;
+    justify-content: space-between;
   }
 
 }
